@@ -30,3 +30,4 @@ node_modules
 
 # Go Workspaces
 go.work
+config.sub.json

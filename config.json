@@ -249,34 +249,6 @@
           "apiKey": "${CFG_FX_KEY-}"
         }
       },
-      "fixer": {
-        "type": "fixerx",
-        "name": "fixerx",
-        "params": {
-          "apiKey": "${CFG_FIXER_KEY-}"
-        }
-      },
-      "currencyapi": {
-        "type": "currencyapi",
-        "name": "currencyapi",
-        "params": {
-          "apiKey": "${CFG_CURRENCYAPI_KEY-}"
-        }
-      },
-      "currencylayer": {
-        "type": "currencylayer",
-        "name": "currencylayer",
-        "params": {
-          "apiKey": "${CFG_CURRENCYLAYER_KEY-}"
-        }
-      },
-      "forex": {
-        "type": "forex",
-        "name": "forex",
-        "params": {
-          "apiKey": "${CFG_FOREX_KEY-}"
-        }
-      },
       "binance_us": {
         "type": "binance",
         "name": "binance_us",
