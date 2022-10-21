@@ -90,7 +90,8 @@
       "BATJPY",
       "OMGJPY",
       "USDCJPY",
-      "DAIJPY"
+      "DAIJPY",
+      "BTCJPY"
     ]
   },
   "spectre": {
@@ -233,7 +234,8 @@
       "BATJPY",
       "OMGJPY",
       "USDCJPY",
-      "DAIJPY"
+      "DAIJPY",
+      "BTCJPY"
     ]
   },
   "gofer": {
@@ -867,14 +869,25 @@
         "method": "median",
         "sources": [
           [{ "origin": "bitfinex", "pair": "ETH/JPY" }],
-          [{ "origin": "binance", "pair": "ETH/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "coinbasepro", "pair": "ETH/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "huobi", "pair": "ETH/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "poloniex", "pair": "ETH/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "kraken", "pair": "ETH/USD" },{ "origin": "fx", "pair": "USD/JPY" }]
+          [{ "origin": "coinbasepro", "pair": "ETH/JPY" }],
+          [{ "origin": "ftx", "pair": "ETH/JPY" }],
+          [{ "origin": "kraken", "pair": "ETH/JPY" }],
+          [{ "origin": "gemini", "pair": "ETH/JPY" }]
         ],
         "params": {
-          "minimumSuccessfulSources": 2
+          "minimumSuccessfulSources": 3
+        }
+      },
+      "BTC/JPY": {
+        "method": "median",
+        "sources": [
+          [{ "origin": "bitfinex", "pair": "BTC/JPY" }],
+          [{ "origin": "coinbasepro", "pair": "BTC/JPY" }],
+          [{ "origin": "ftx", "pair": "BTC/JPY" }],
+          [{ "origin": "kraken", "pair": "BTC/JPY" }]
+        ],
+        "params": {
+          "minimumSuccessfulSources": 3
         }
       },
       "WBTC/JPY": {
@@ -908,11 +921,11 @@
         "method": "median",
         "sources": [
           [{ "origin": "coinbasepro", "pair": "UNI/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "ftx", "pair": "UNI/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
+          [{ "origin": "ftx", "pair": "UNI/BTC" },{ "origin": "fx", "pair": "BTC/JPY" }],
           [{ "origin": "uniswapV3", "pair": "UNI/ETH" },{ "origin": "bitfinex", "pair": "ETH/JPY" }]
         ],
         "params": {
-          "minimumSuccessfulSources": 1
+          "minimumSuccessfulSources": 2
         }
       },
       "RENBTC/JPY": {
@@ -939,13 +952,13 @@
       "ATOM/JPY": {
         "method": "median",
         "sources": [
-          [{ "origin": "binance", "pair": "ATOM/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "bitfinex", "pair": "ATOM/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "coinbasepro", "pair": "ATOM/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "kraken", "pair": "ATOM/USD" },{ "origin": "fx", "pair": "USD/JPY" }]
+          [{ "origin": "binance", "pair": "ATOM/BTC" },{ "origin": ".", "pair": "BTC/JPY" }],
+          [{ "origin": "bitfinex", "pair": "ATOM/BTC" },{ "origin": ".", "pair": "BTC/JPY" }],
+          [{ "origin": "coinbasepro", "pair": "ATOM/BTC" },{ "origin": ".", "pair": "BTC/JPY" }],
+          [{ "origin": "kraken", "pair": "ATOM/BTC" },{ "origin": ".", "pair": "BTC/JPY" }]
         ],
         "params": {
-          "minimumSuccessfulSources": 1
+          "minimumSuccessfulSources": 2
         }
       },
       "BAT/JPY": {
@@ -960,10 +973,9 @@
       "OMG/JPY": {
         "method": "median",
         "sources": [
-          [{ "origin": "binance", "pair": "OMG/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "bitfinex", "pair": "OMG/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "coinbasepro", "pair": "OMG/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "kraken", "pair": "OMG/USD" },{ "origin": "fx", "pair": "USD/JPY" }]
+          [{ "origin": "bitfinex", "pair": "OMG/BTC" },{ "origin": ".", "pair": "BTC/JPY" }],
+          [{ "origin": "coinbasepro", "pair": "OMG/BTC" },{ "origin": "fx", "pair": "BTC/JPY" }],
+          [{ "origin": "kraken", "pair": "OMG/BTC" },{ "origin": "fx", "pair": "BTC/JPY" }]
         ],
         "params": {
           "minimumSuccessfulSources": 1
@@ -983,9 +995,8 @@
       "DAI/JPY": {
         "method": "median",
         "sources": [
-          [{ "origin": "bitfinex", "pair": "DAI/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "coinbasepro", "pair": "DAI/USD" },{ "origin": "fx", "pair": "USD/JPY" }],
-          [{ "origin": "kraken", "pair": "DAI/USD" },{ "origin": "fx", "pair": "USD/JPY" }]
+          [{ "origin": "bitfinex", "pair": "DAI/BTC" },{"origin": ".", "pair": "BTC/JPY"}],
+          [{ "origin": "coinbasepro", "pair": "DAI/BTC" },{"origin": ".", "pair": "BTC/JPY"}]
         ],
         "params": {
           "minimumSuccessfulSources": 1
