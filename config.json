@@ -91,7 +91,8 @@
       "OMGJPY",
       "USDCJPY",
       "DAIJPY",
-      "BTCJPY"
+      "BTCJPY",
+      "DAIUSD"
     ]
   },
   "spectre": {
@@ -235,7 +236,8 @@
       "OMGJPY",
       "USDCJPY",
       "DAIJPY",
-      "BTCJPY"
+      "BTCJPY",
+      "DAIUSD"
     ]
   },
   "gofer": {
@@ -584,6 +586,7 @@
         "method": "median",
         "sources": [
           [{ "origin": "binance", "pair": "ETH/BTC" },{ "origin": ".", "pair": "BTC/USD" }],
+          [{ "origin": "balancer", "pair": "ETH/USD" }],
           [{ "origin": "bitstamp", "pair": "ETH/USD" }],
           [{ "origin": "coinbasepro", "pair": "ETH/USD" }],
           [{ "origin": "ftx", "pair": "ETH/USD" }],
@@ -859,7 +862,8 @@
       "USD/JPY": {
         "method": "median",
         "sources": [
-          [{ "origin": "fx", "pair": "USD/JPY" }]
+          [{ "origin": "fx", "pair": "USD/JPY" }],
+          [{ "origin": "coinbasepro", "pair": "USD/JPY" }]
         ],
         "params": {
           "minimumSuccessfulSources": 1
@@ -869,13 +873,20 @@
         "method": "median",
         "sources": [
           [{ "origin": "bitfinex", "pair": "ETH/JPY" }],
+          [{ "origin": "binance", "pair": "ETH/JPY" }],
+          [{ "origin": "bittrex", "pair": "ETH/JPY" }],
+          [{ "origin": "gateio", "pair": "ETH/USDT" },{ "origin": "gateio", "pair": "USDT/JPY" }],
           [{ "origin": "coinbasepro", "pair": "ETH/JPY" }],
           [{ "origin": "ftx", "pair": "ETH/JPY" }],
+          [{ "origin": "gemini", "pair": "ETH/JPY" }],
+          [{ "origin": "houbi", "pair": "ETH/JPY" }],
+          [{ "origin": "kucoin", "pair": "ETH/USDT" },{ "origin": "kucoin", "pair": "USDT/JPY" }],
+          [{ "origin": "okex", "pair": "ETH/USDT" },{ "origin": "okex", "pair": "USDT/JPY" }],
           [{ "origin": "kraken", "pair": "ETH/JPY" }],
-          [{ "origin": "gemini", "pair": "ETH/JPY" }]
+          [{ "origin": "poloniex", "pair": "ETH/BTC" },{ "origin": ".", "pair": "BTC/JPY" }]
         ],
         "params": {
-          "minimumSuccessfulSources": 3
+          "minimumSuccessfulSources": 6
         }
       },
       "BTC/JPY": {
@@ -884,7 +895,8 @@
           [{ "origin": "bitfinex", "pair": "BTC/JPY" }],
           [{ "origin": "coinbasepro", "pair": "BTC/JPY" }],
           [{ "origin": "ftx", "pair": "BTC/JPY" }],
-          [{ "origin": "kraken", "pair": "BTC/JPY" }]
+          [{ "origin": "kraken", "pair": "BTC/JPY" }],
+          [{ "origin": "gemini", "pair": "BTC/JPY" }]
         ],
         "params": {
           "minimumSuccessfulSources": 3
@@ -996,10 +1008,32 @@
         "method": "median",
         "sources": [
           [{ "origin": "bitfinex", "pair": "DAI/BTC" },{"origin": ".", "pair": "BTC/JPY"}],
-          [{ "origin": "coinbasepro", "pair": "DAI/BTC" },{"origin": ".", "pair": "BTC/JPY"}]
+          [{ "origin": "bitfinex", "pair": "DAI/BTC" },{"origin": "bitfinex", "pair": "BTC/JPY"}],
+          [{ "origin": "bitfinex", "pair": "DAI/BTC" },{"origin": "coinbasepro", "pair": "BTC/JPY"}],
+          [{ "origin": "bitfinex", "pair": "DAI/BTC" },{"origin": "ftx", "pair": "BTC/JPY"}],
+          [{ "origin": "bitfinex", "pair": "DAI/BTC" },{"origin": "kraken", "pair": "BTC/JPY"}],
+          [{ "origin": "bitfinex", "pair": "DAI/BTC" },{"origin": "gemini", "pair": "BTC/JPY"}]
         ],
         "params": {
-          "minimumSuccessfulSources": 1
+          "minimumSuccessfulSources": 2
+        }
+      },
+      "DAI/USD": {
+        "method": "median",
+        "sources": [
+          [{ "origin": "bitfinex", "pair": "DAI/USD" }],
+          [{ "origin": "bitstamp", "pair": "DAI/USD" }],
+          [{ "origin": "bittrex", "pair": "DAI/USD" }],
+          [{ "origin": "coinbasepro", "pair": "DAI/USD" }],
+          [{ "origin": "gateio", "pair": "DAI/USD" }],
+          [{ "origin": "gemini", "pair": "DAI/USD" }],
+          [{ "origin": "hitbtc", "pair": "DAI/USD" }],
+          [{ "origin": "kraken", "pair": "DAI/USD" }],
+          [{ "origin": "okex", "pair": "DAI/USD" }],
+          [{ "origin": "polonex", "pair": "DAI/USD" }]
+        ],
+        "params": {
+          "minimumSuccessfulSources": 2
         }
       }
     }
