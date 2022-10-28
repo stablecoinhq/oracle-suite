@@ -63,7 +63,7 @@ var ethClientFactory = func(
 			return nil, err
 		}
 		rpcClient, err := rpc.DialHTTPWithClient(
-			fmt.Sprintf("http://%s", splitterVirtualHost),
+			endpoints[0],
 			&http.Client{Transport: splitter},
 		)
 		if err != nil {
