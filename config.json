@@ -1015,7 +1015,7 @@
           [{ "origin": "bitfinex", "pair": "DAI/BTC" },{"origin": "gemini", "pair": "BTC/JPY"}]
         ],
         "params": {
-          "minimumSuccessfulSources": 2
+          "minimumSuccessfulSources": 4
         }
       },
       "DAI/USD": {
