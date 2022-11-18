@@ -184,7 +184,7 @@ func NewMedianFeedsCmd(opts *options) *cobra.Command {
 func NewMedianPokeCmd(opts *options) *cobra.Command {
 	return &cobra.Command{
 		Use:   "poke median_address [json_messages_list]",
-		Args:  cobra.ExactArgs(1),
+		Args:  cobra.ExactArgs(2),
 		Short: "directly invokes poke method",
 		Long:  ``,
 		RunE: func(_ *cobra.Command, args []string) error {
@@ -192,7 +192,7 @@ func NewMedianPokeCmd(opts *options) *cobra.Command {
 			if err != nil {
 				return err
 			}
-			median := oracleGeth.NewMedian(srv.Client, ethereum.HexToAddress(args[1]))
+			median := oracleGeth.NewMedian(srv.Client, ethereum.HexToAddress(args[0]))
 
 			// Read JSON and parse it:
 			in, err := readInput(args, 1)

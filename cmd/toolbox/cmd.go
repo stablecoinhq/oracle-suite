@@ -48,6 +48,7 @@ func NewRootCommand() *cobra.Command {
 
 	rootCmd.AddCommand(
 		NewMedianCmd(&opts),
+		NewMegapokerCmd(&opts),
 		NewPriceCmd(&opts),
 		NewSignerCmd(&opts),
 		NewSpectreCmd(&opts),
