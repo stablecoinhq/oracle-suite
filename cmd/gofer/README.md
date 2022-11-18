@@ -403,6 +403,16 @@ you have to launch the agent using the `gofer agent` command.
 From now, the `gofer price` command will retrieve asset prices from the agent instead of retrieving them directly from
 the origins. If you want to temporarily disable this behavior you have to use the `--norpc` flag.
 
+## Origins  
+
+**originsに新しいフィード先を追加するフロー**  
+   
+pkg/price/provider/origins/***に対応するgoファイル追加(取得形式は当然サイトごとに違うので注意)   
+pkg/config/gofer/origin.goに項目追加    
+config.jsonに項目追加    
+pkg/price/provider/origins/origin.goに項目追加    
+github.com/chronicleprotocol/oracle-suite/をimportしている箇所が多くorigins周りでそちらを参照しそうな箇所は変更する必要がある(このリポジトリに向ける、など)　　
+
 ## License
 
 [The GNU Affero General Public License](https://www.notion.so/LICENSE)
